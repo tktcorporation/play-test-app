@@ -1,0 +1,28 @@
+@import services._
+@(items: Seq[Todo])
+
+<html>
+    <head>
+        <title>Todo</title>
+    </head>
+    <body>
+
+        <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @items.map { todo =>
+                <tr>
+                    <td>@todo.name</td>
+                </tr>
+                }
+                </tbody>
+            </table>
+            <a href="/todo/new">登録画面</a>
+        </section>
+    </body>
+</html>
